@@ -6,11 +6,11 @@ Simple REST API in .NET core for todo items
 Open endpoints require no Authentication.
 
 ### Todo
-* [All]() : `GET /api/v1/todo/`
-* [Get]() : `GET /api/v1/todo/2`
-* [Create]() : `POST /api/v1/todo/`
-* [Update]() : `PUT /api/v1/todo/2`
-* [Delete]() : `DELETE /api/v1/todo/2`
+* [All](#get-all) : `GET /api/v1/todo/`
+* [Get](#get-get) : `GET /api/v1/todo/2`
+* [Create](#post-create-new-todo) : `POST /api/v1/todo/`
+* [Update](#put-update-todo) : `PUT /api/v1/todo/2`
+* [Delete](#delete-delete-todo) : `DELETE /api/v1/todo/2`
 
 
 #### `GET` All
