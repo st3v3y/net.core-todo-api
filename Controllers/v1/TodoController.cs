@@ -6,9 +6,9 @@ using aspnetTest.Database;
 using aspnetTest.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace aspnetTest.Controllers
+namespace aspnetTest.Controllers.Api.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class TodoController : ControllerBase
     {
@@ -19,21 +19,21 @@ namespace aspnetTest.Controllers
             _dbContext = dbContext;
         }
 
-        // GET api/values
+        // GET api/v1/todo
         [HttpGet]
         public ActionResult<IEnumerable<Todo>> Get()
         {
             return _dbContext.Todos.ToArray();
         }
 
-        // GET api/values/5
+        // GET api/v1/todo/5
         [HttpGet("{id}")]
         public ActionResult<Todo> Get(int id)
         {
             return _dbContext.Todos.Find(id);
         }
 
-        // POST api/values
+        // POST api/v1/todo/
         [HttpPost]
         public void Post([FromBody]Todo todo)
         {
@@ -41,7 +41,7 @@ namespace aspnetTest.Controllers
             _dbContext.SaveChanges();
         }
 
-        // PUT api/values/5
+        // PUT api/v1/todo/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]Todo todo)
         {
@@ -59,7 +59,7 @@ namespace aspnetTest.Controllers
             _dbContext.SaveChanges();
         }
 
-        // DELETE api/values/5
+        // DELETE api/v1/todo/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
