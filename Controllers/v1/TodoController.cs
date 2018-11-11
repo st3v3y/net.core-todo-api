@@ -54,7 +54,9 @@ namespace aspnetTest.Controllers.Api.v1
             _dbContext.Update(updateTodo);
 
             updateTodo.Checked = todo.Checked;
-            updateTodo.Text = todo.Text;
+            if(String.IsNullOrEmpty(todo.Text)) {
+                updateTodo.Text = todo.Text;
+            }
 
             _dbContext.SaveChanges();
         }
